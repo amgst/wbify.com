@@ -1,128 +1,122 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+const IndexPage = () => {
+  return (
+    <main className="bg-white">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gray-100">
+        <h1 className="text-4xl font-bold text-blue-600 mb-4">Welcome to Wbify</h1>
+        <p className="text-lg text-gray-700">Explore our recent Shopify projects</p>
+      </section>
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Aren't these truly <span className="text-purple-400">remarkable?</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our latest Shopify projects that have transformed businesses and delivered exceptional results.
+            </p>
+          </div>
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+          {/* Portfolio Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: "blue ruby",
+                brand: "Blue Ruby Jewelry",
+                description: "Luxury jewelry e-commerce with custom product configurator",
+                tags: ["E-commerce", "Custom App"],
+                date: "Dec 15, 2024",
+                colors: "from-blue-500 to-indigo-600",
+                overlay: "bg-blue-600",
+              },
+              {
+                name: "SIDEKICK",
+                brand: "SideKick Tools",
+                description: "Professional tools marketplace with advanced search and filtering",
+                tags: ["Marketplace", "B2B"],
+                date: "Nov 28, 2024",
+                colors: "from-orange-500 to-red-600",
+                overlay: "bg-orange-600",
+              },
+              {
+                name: "WOLF CIRCUS",
+                brand: "Wolf Circus",
+                description: "Modern jewelry brand with AR try-on functionality",
+                tags: ["Fashion", "AR/VR"],
+                date: "Oct 12, 2024",
+                colors: "from-amber-600 to-yellow-700",
+                overlay: "bg-amber-600",
+              },
+              {
+                name: "PrintNinja",
+                brand: "PrintNinja",
+                description: "Custom printing service with real-time quote calculator",
+                tags: ["Print Services", "Calculator"],
+                date: "Sep 05, 2024",
+                colors: "from-indigo-600 to-purple-700",
+                overlay: "bg-indigo-600",
+              },
+            ].map((project, i) => (
+              <div
+                key={i}
+                className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 hover:shadow-2xl transition-all duration-500 cursor-pointer`}
+              >
+                <div className="p-6">
+                  {/* Project Logo/Brand */}
+                  <div className={`${project.overlay} rounded-xl p-4 mb-4 w-fit`}>
+                    <span className="text-white font-bold text-lg">{project.name}</span>
+                  </div>
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+                  {/* Simulated Preview Area */}
+                  <div className="bg-gray-700 rounded-xl overflow-hidden mb-4 aspect-video">
+                    <div className={`w-full h-full bg-gradient-to-br ${project.colors} flex items-center justify-center relative`}>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-white text-sm opacity-50">Project Preview</div>
+                      </div>
+                      <div className={`absolute inset-0 ${project.overlay} bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center`}>
+                        <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">View Project →</span>
+                      </div>
+                    </div>
+                  </div>
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+                  {/* Info */}
+                  <h3 className="text-white font-bold text-xl mb-2">{project.brand}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{project.description}</p>
 
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, idx) => (
+                      <span key={idx} className="bg-white bg-opacity-10 text-white px-2 py-1 rounded text-xs">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
+                  {/* Date */}
+                  <p className="text-gray-500 text-xs">{project.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* View All Projects Button */}
+          <div className="text-center mt-12">
+            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover-scale shadow-lg">
+              View All Projects
+              <svg className="inline-block w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
 
 export default IndexPage
