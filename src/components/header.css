@@ -1,0 +1,63 @@
+/* Header Styles - Add this to src/components/header.css */
+
+/* Base responsive classes */
+@media (min-width: 768px) {
+  .desktop-nav-wbify {
+    display: flex !important;
+  }
+  .mobile-menu-btn-wbify {
+    display: none !important;
+  }
+}
+
+/* Logo hover */
+.logo-wbify:hover {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Navigation link hover effects */
+.nav-link-wbify:hover {
+  color: white !important;
+  background: rgba(255,255,255,0.1) !important;
+}
+
+/* CTA button hover effects */
+.cta-button-wbify:hover {
+  background: rgba(255,255,255,0.25) !important;
+  transform: translateY(-1px) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Mobile menu button hover */
+.mobile-menu-btn-wbify:hover {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+/* Mobile navigation link hover */
+.mobile-nav-link-wbify:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #c084fc !important;
+  text-decoration: none !important;
+}
+
+/* Mobile CTA hover */
+.mobile-cta-wbify:hover {
+  background: #7c3aed !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Additional reset styles to prevent conflicts */
+.desktop-nav-wbify a,
+.mobile-nav-link-wbify,
+.mobile-cta-wbify,
+.logo-wbify {
+  box-sizing: border-box;
+}
+
+/* Ensure mobile menu is properly positioned */
+.mobile-menu-container {
+  position: relative;
+}

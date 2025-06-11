@@ -1,4 +1,6 @@
 import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const services = [
   {
@@ -171,7 +173,7 @@ const testimonials = [
     role: "CEO, Fashion Forward",
     quote:
       "ShopifyPro transformed our online store completely. The custom features they built increased our conversion rate by 340%. Their team is incredibly professional and responsive.",
-    stars: 2,
+    stars: 5,
   },
   {
     initials: "MC",
@@ -237,608 +239,1034 @@ const IndexPage = () => {
   }
 
   return (
-    <main className="bg-white">
-      {/* Hero Section */}
-      <section className="min-h-screen gradient-bg relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute top-20 left-10 w-64 h-64 bg-purple-600 rounded-full opacity-20"
-            style={{ filter: "blur(60px)" }}
-          />
-          <div
-            className="absolute bottom-20 right-10 w-80 h-80 bg-blue-600 rounded-full opacity-20"
-            style={{ filter: "blur(60px)" }}
-          />
-        </div>
-        <nav className="relative z-10 flex items-center justify-between p-6 lg:px-12">
-          <div className="text-2xl font-bold text-white">ShopifyPro</div>
-          <div className="hidden md:flex space-x-8">
-            <a
-              href="#services"
-              className="text-white hover:text-purple-300 transition-colors duration-300"
-            >
-              Services
-            </a>
-            <a
-              href="#portfolio"
-              className="text-white hover:text-purple-300 transition-colors duration-300"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#about"
-              className="text-white hover:text-purple-300 transition-colors duration-300"
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
-            >
-              Contact
-            </a>
-          </div>
-          <div className="md:hidden">
-            <button className="text-white">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </nav>
-        <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -mt-20">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-600 bg-opacity-20 text-green-300 text-sm mb-6">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-2" />{" "}
-                Available for New Projects
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Professional{" "}
-                <span className="text-purple-400">Web Development</span>{" "}
-                Services
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
-                Transform your digital vision into reality with custom websites,
-                e-commerce stores, and web applications that drive growth and
-                enhance user experience.
-              </p>
-              <div className="flex justify-center lg:justify-start gap-8 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white">150+</div>
-                  <div className="text-gray-400 text-sm">
-                    Projects Completed
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white">5.0★</div>
-                  <div className="text-gray-400 text-sm">Client Rating</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white">24/7</div>
-                  <div className="text-gray-400 text-sm">Support</div>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Start Your Project
-                  <svg
-                    className="inline-block w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </button>
-                <button className="border-2 border-white border-opacity-30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300">
-                  View Portfolio
-                </button>
-              </div>
-            </div>
-            <div className="relative animate-float">
-              <div className="glass rounded-3xl p-8 shadow-2xl">
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M3 13h8V3c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v10zm0 8h8v-6H3v6zm10 0h8V11c0-1.1-.9-2-2-2h-6v10zm0-18v6h8V3c0-1.1-.9-2-2-2h-6z" />
-                  </svg>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
-                    <div className="w-3 h-3 bg-green-400 rounded-full mr-4" />
-                    <span className="text-white font-medium">
-                      Custom Website Development
-                    </span>
-                  </div>
-                  <div className="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full mr-4" />
-                    <span className="text-white font-medium">
-                      E-commerce Solutions
-                    </span>
-                  </div>
-                  <div className="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full mr-4" />
-                    <span className="text-white font-medium">
-                      Web Application Development
-                    </span>
-                  </div>
-                  <div className="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
-                    <div className="w-3 h-3 bg-pink-400 rounded-full mr-4" />
-                    <span className="text-white font-medium">
-                      Digital Strategy Consulting
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -top-6 -left-6 glass rounded-2xl p-4 shadow-xl">
-                <div className="text-2xl font-bold text-white">99%</div>
-                <div className="text-gray-300 text-sm">Success Rate</div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 glass rounded-2xl p-4 shadow-xl">
-                <div className="text-2xl font-bold text-white">48h</div>
-                <div className="text-gray-300 text-sm">Quick Start</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-purple-600">Web Services</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From custom development to digital strategy, we provide
-              comprehensive web solutions to grow your business and enhance your
-              online presence.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((s, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100"
-              >
-                <div
-                  className={`w-16 h-16 bg-${s.color}-100 rounded-2xl flex items-center justify-center mb-6`}
-                >
-                  {s.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {s.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{s.description}</p>
-                <ul className="space-y-2 text-gray-600">
-                  {s.bullets.map((b, i) => (
-                    <li key={i} className="flex items-center">
-                      <svg
-                        className="w-4 h-4 text-green-500 mr-2"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Aren't these truly{" "}
-              <span className="text-purple-400">remarkable?</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our latest Shopify projects that have transformed
-              businesses and delivered exceptional results.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {projects.map((project, i) => (
-              <div
-                key={project.id}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 hover:shadow-2xl transition-all duration-500 cursor-pointer"
-                onClick={() => openProject(project.id)}
-              >
-                <div className="p-6">
-                  <div
-                    className={`${project.overlay} rounded-xl p-4 mb-4 w-fit`}
-                  >
-                    <span className="text-white font-bold text-lg">
-                      {project.name}
-                    </span>
-                  </div>
-                  <div className="bg-gray-700 rounded-xl overflow-hidden mb-4 aspect-video">
-                    <div
-                      className={`w-full h-full bg-gradient-to-br ${project.colors} flex items-center justify-center relative`}
-                    >
-                      <div className="w-full h-full relative">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="text-white text-sm opacity-50">
-                            Project Preview
-                          </div>
-                        </div>
-                        <div
-                          className={`absolute inset-0 ${project.overlay} bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center`}
-                        >
-                          <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">
-                            View Project →
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <h3 className="text-white font-bold text-xl mb-2">
-                    {project.brand}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="bg-white bg-opacity-10 text-white px-2 py-1 rounded text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-gray-500 text-xs">{project.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-              View All Projects
-              <svg
-                className="inline-block w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Client <span className="text-purple-600">Success Stories</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from businesses that have transformed their e-commerce
-              presence with our Shopify solutions.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((t, idx) => (
-              <div
-                key={idx}
-                className="bg-gray-50 rounded-2xl p-8 border border-gray-100"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(t.stars)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className="w-5 h-5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-6 italic">"{t.quote}"</p>
-                <div className="flex items-center">
-                  <div
-                    className={`w-12 h-12 bg-${t.color}-100 rounded-full flex items-center justify-center mr-4`}
-                  >
-                    <span className={`text-${t.color}-600 font-bold text-lg`}>
-                      {t.initials}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">{t.name}</div>
-                    <div className="text-gray-600 text-sm">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-16">
+    <Layout headerTransparent={true}>
+      <style>{`
+        .gradient-bg {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        .animate-bounce {
+          animation: bounce 1s infinite;
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+          }
+          50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+          }
+        }
+        /* Container styles for consistent layout */
+        .hero-container {
+          max-width: 72rem !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          display: grid !important;
+          grid-template-columns: 1fr !important;
+          gap: 3rem !important;
+          align-items: center !important;
+        }
+        
+        @media (min-width: 1024px) {
+          .hero-container {
+            grid-template-columns: 1fr 1fr !important;
+          }
+        }
+        .max-w-6xl { max-width: 72rem !important; }
+        .max-w-7xl { max-width: 80rem !important; }
+        .max-w-4xl { max-width: 56rem !important; }
+        .max-w-3xl { max-width: 48rem !important; }
+        .max-w-2xl { max-width: 42rem !important; }
+        .mx-auto { margin-left: auto !important; margin-right: auto !important; }
+        .grid { display: grid !important; }
+        .lg\\:grid-cols-2 { grid-template-columns: 1fr !important; }
+        .gap-12 { gap: 3rem !important; }
+        .gap-8 { gap: 2rem !important; }
+        .gap-6 { gap: 1.5rem !important; }
+        .gap-4 { gap: 1rem !important; }
+        .items-center { align-items: center !important; }
+        
+        /* Responsive grid for larger screens */
+        @media (min-width: 1024px) {
+          .lg\\:grid-cols-2 { 
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important; 
+          }
+          .lg\\:grid-cols-3 { 
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important; 
+          }
+          .lg\\:grid-cols-4 { 
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important; 
+          }
+          .lg\\:text-left { text-align: left !important; }
+          .lg\\:justify-start { justify-content: flex-start !important; }
+        }
+        
+        @media (min-width: 768px) {
+          .md\\:grid-cols-2 { 
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important; 
+          }
+          .md\\:text-5xl { font-size: 3rem !important; }
+          .md\\:text-4xl { font-size: 2.25rem !important; }
+          .md\\:flex { display: flex !important; }
+          .md\\:flex-row { flex-direction: row !important; }
+        }
+      `}</style>
+      
+      <main className="bg-white">
+        {/* Hero Section */}
+        <section className="min-h-screen gradient-bg relative overflow-hidden" style={{ marginTop: "-80px", paddingTop: "80px" }}>
+          <div className="absolute inset-0"  style={{ zIndex: 1, pointerEvents: 'none' }}>
             <div
-              className="glass rounded-3xl p-12 max-w-4xl mx-auto"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%)",
+              className="absolute top-20 left-10 w-64 h-64 bg-purple-600 rounded-full opacity-20"
+              style={{ filter: "blur(60px)", width: "16rem", height: "16rem", top: "5rem", left: "2.5rem" }}
+            />
+            <div
+              className="absolute bottom-20 right-10 w-80 h-80 bg-blue-600 rounded-full opacity-20"
+              style={{ filter: "blur(60px)", width: "20rem", height: "20rem", bottom: "5rem", right: "2.5rem" }}
+            />
+          </div>
+          <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -mt-20" style={{ position: "relative", zIndex: 10, display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh", paddingLeft: "1.5rem", paddingRight: "1.5rem", marginTop: "-5rem" }}>
+            <div 
+              className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center hero-container" 
+              style={{ 
+                maxWidth: "72rem", 
+                marginLeft: "auto", 
+                marginRight: "auto", 
+                display: "grid", 
+                gridTemplateColumns: "1fr",
+                gap: "3rem", 
+                alignItems: "center" 
               }}
             >
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Ready to Transform Your Shopify Store?
-              </h3>
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Join 150+ successful businesses who've trusted us to build their
-                dream e-commerce stores.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Get Free Consultation
-                </button>
-                <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300">
-                  View Our Process
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Frequently Asked{" "}
-              <span className="text-purple-600">Questions</span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              Get answers to common questions about our web development services
-              and process.
-            </p>
-          </div>
-          <div className="space-y-6">
-            {faqs.map((f, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl shadow-lg border border-gray-100"
-              >
-                <button
-                  className="w-full text-left p-6 focus:outline-none"
-                  onClick={() => toggleFAQ(i)}
+              
+              {/* Left Content */}
+              <div className="text-center lg:text-left" style={{ textAlign: "center" }}>
+                {/* Status Badge */}
+                <div 
+                  className="inline-flex items-center px-4 py-2 rounded-full bg-green-600 bg-opacity-20 text-green-300 text-sm mb-6"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    padding: "0.5rem 1rem",
+                    borderRadius: "9999px",
+                    backgroundColor: "rgba(34, 197, 94, 0.2)",
+                    color: "#86efac",
+                    fontSize: "0.875rem",
+                    marginBottom: "1.5rem"
+                  }}
                 >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-bold text-gray-900 pr-8">
-                      {f.q}
-                    </h3>
-                    <svg
-                      className={`w-6 h-6 text-purple-600 transform transition-transform duration-300 ${openFAQ[i] ? "rotate-180" : ""}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                {openFAQ[i] && (
-                  <div className="px-6 pb-6">
-                    <p className="text-gray-600 leading-relaxed">{f.a}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white" id="contact">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-1">
-              <div className="text-2xl font-bold mb-4">Wbify</div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Professional web development agency transforming digital visions
-                into reality. Building high-performance websites and
-                applications since 2020.
-              </p>
-              <div className="flex space-x-4">
-                {["twitter", "linkedin", "github", "instagram"].map(icon => (
-                  <a
-                    key={icon}
-                    href="#"
-                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300"
-                  >
-                    <span className="sr-only">{icon}</span>
-                    <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                    </svg>
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Services</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li>E-commerce Development</li>
-                <li>Web Application Development</li>
-                <li>UI/UX Design</li>
-                <li>Performance Optimization</li>
-                <li>Digital Strategy</li>
-                <li>Ongoing Support</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Company</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li>About Us</li>
-                <li>Portfolio</li>
-                <li>Case Studies</li>
-                <li>Process</li>
-                <li>Blog</li>
-                <li>Careers</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Stay Updated</h3>
-              <p className="text-gray-400 mb-4">
-                Get the latest Shopify tips and updates delivered to your inbox.
-              </p>
-              <div className="mb-6">
-                <div className="flex">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-600"
+                  <span 
+                    className="w-2 h-2 bg-green-400 rounded-full mr-2"
+                    style={{
+                      width: "0.5rem",
+                      height: "0.5rem",
+                      backgroundColor: "#4ade80",
+                      borderRadius: "9999px",
+                      marginRight: "0.5rem"
+                    }}
                   />
-                  <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-r-lg transition-colors duration-300">
+                  Available for New Projects
+                </div>
+
+                {/* Main Heading */}
+                <h1 
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                  style={{
+                    fontSize: "clamp(2.25rem, 5vw, 3.75rem)",
+                    fontWeight: "700",
+                    color: "white",
+                    marginBottom: "1.5rem",
+                    lineHeight: "1.25"
+                  }}
+                >
+                  Professional{" "}
+                  <span className="text-purple-400" style={{ color: "#c084fc" }}>Web Development</span>{" "}
+                  Services
+                </h1>
+                {/* Subheading */}
+                <p 
+                  className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl"
+                  style={{
+                    fontSize: "1.25rem",
+                    color: "#d1d5db",
+                    marginBottom: "2rem",
+                    lineHeight: "1.625",
+                    maxWidth: "42rem"
+                  }}
+                >
+                  Transform your digital vision into reality with custom websites,
+                  e-commerce stores, and web applications that drive growth and
+                  enhance user experience.
+                </p>
+
+                {/* Stats */}
+                <div className="flex justify-center lg:justify-start gap-8 mb-8" style={{ display: "flex", justifyContent: "center", gap: "2rem", marginBottom: "2rem" }}>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white" style={{ fontSize: "1.875rem", fontWeight: "700", color: "white" }}>150+</div>
+                    <div className="text-gray-400 text-sm" style={{ color: "#9ca3af", fontSize: "0.875rem" }}>Projects Completed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white" style={{ fontSize: "1.875rem", fontWeight: "700", color: "white" }}>5.0★</div>
+                    <div className="text-gray-400 text-sm" style={{ color: "#9ca3af", fontSize: "0.875rem" }}>Client Rating</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white" style={{ fontSize: "1.875rem", fontWeight: "700", color: "white" }}>24/7</div>
+                    <div className="text-gray-400 text-sm" style={{ color: "#9ca3af", fontSize: "0.875rem" }}>Support</div>
+                  </div>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                  <button 
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                    style={{
+                      backgroundColor: "#9333ea",
+                      color: "white",
+                      padding: "1rem 2rem",
+                      borderRadius: "9999px",
+                      fontWeight: "600",
+                      fontSize: "1.125rem",
+                      border: "none",
+                      cursor: "pointer",
+                      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    Start Your Project
                     <svg
-                      className="w-5 h-5"
+                      className="inline-block w-5 h-5 ml-2"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      style={{ width: "1.25rem", height: "1.25rem", marginLeft: "0.5rem", display: "inline-block" }}
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
                       />
                     </svg>
                   </button>
+                  <button 
+                    className="border-2 border-white border-opacity-30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300"
+                    style={{
+                      border: "2px solid rgba(255, 255, 255, 0.3)",
+                      color: "white",
+                      padding: "1rem 2rem",
+                      borderRadius: "9999px",
+                      fontWeight: "600",
+                      fontSize: "1.125rem",
+                      backgroundColor: "transparent",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    View Portfolio
+                  </button>
                 </div>
               </div>
-              <div className="space-y-3 text-gray-400">
-                <div className="flex items-center">
-                  <svg
-                    className="w-5 h-5 mr-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+
+              {/* Right Content - Service Showcase */}
+              <div className="relative animate-float" style={{ position: "relative" }}>
+                {/* Main Service Card */}
+                <div 
+                  className="glass rounded-3xl p-8 shadow-2xl"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.1)",
+                    backdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    borderRadius: "1.5rem",
+                    padding: "2rem",
+                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+                  }}
+                >
+                  
+                  {/* Logo */}
+                  <div 
+                    className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg"
+                    style={{
+                      width: "4rem",
+                      height: "4rem",
+                      backgroundColor: "#3b82f6",
+                      borderRadius: "1rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "1.5rem",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+                    }}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  hello@wbify.com
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      style={{ width: "2rem", height: "2rem", color: "white" }}
+                    >
+                      <path d="M3 13h8V3c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v10zm0 8h8v-6H3v6zm10 0h8V11c0-1.1-.9-2-2-2h-6v10zm0-18v6h8V3c0-1.1-.9-2-2-2h-6z" />
+                    </svg>
+                  </div>
+
+                  {/* Services List */}
+                  <div className="space-y-4" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                    {[
+                      { color: "#4ade80", text: "Custom Website Development" },
+                      { color: "#3b82f6", text: "E-commerce Solutions" },
+                      { color: "#c084fc", text: "Web Application Development" },
+                      { color: "#ec4899", text: "Digital Strategy Consulting" }
+                    ].map((item, idx) => (
+                      <div 
+                        key={idx}
+                        className="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          padding: "1rem",
+                          backgroundColor: "rgba(255, 255, 255, 0.05)",
+                          borderRadius: "0.75rem",
+                          border: "1px solid rgba(255, 255, 255, 0.1)"
+                        }}
+                      >
+                        <div 
+                          className="w-3 h-3 rounded-full mr-4"
+                          style={{
+                            width: "0.75rem",
+                            height: "0.75rem",
+                            backgroundColor: item.color,
+                            borderRadius: "9999px",
+                            marginRight: "1rem"
+                          }}
+                        />
+                        <span className="text-white font-medium" style={{ color: "white", fontWeight: "500" }}>
+                          {item.text}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <svg
-                    className="w-5 h-5 mr-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  +1 (555) 123-4567
+
+                {/* Floating Stats Cards */}
+                <div 
+                  className="absolute -top-6 -left-6 glass rounded-2xl p-4 shadow-xl"
+                  style={{
+                    position: "absolute",
+                    top: "-1.5rem",
+                    left: "-1.5rem",
+                    background: "rgba(255, 255, 255, 0.1)",
+                    backdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    borderRadius: "1rem",
+                    padding: "1rem",
+                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                  }}
+                >
+                  <div className="text-2xl font-bold text-white" style={{ fontSize: "1.5rem", fontWeight: "700", color: "white" }}>99%</div>
+                  <div className="text-gray-300 text-sm" style={{ color: "#d1d5db", fontSize: "0.875rem" }}>Success Rate</div>
+                </div>
+
+                <div 
+                  className="absolute -bottom-6 -right-6 glass rounded-2xl p-4 shadow-xl"
+                  style={{
+                    position: "absolute",
+                    bottom: "-1.5rem",
+                    right: "-1.5rem",
+                    background: "rgba(255, 255, 255, 0.1)",
+                    backdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    borderRadius: "1rem",
+                    padding: "1rem",
+                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                  }}
+                >
+                  <div className="text-2xl font-bold text-white" style={{ fontSize: "1.5rem", fontWeight: "700", color: "white" }}>48h</div>
+                  <div className="text-gray-300 text-sm" style={{ color: "#d1d5db", fontSize: "0.875rem" }}>Quick Start</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-6 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                © 2025 ShopifyPro. All rights reserved.
-              </div>
-              <div className="flex space-x-6 text-sm text-gray-400">
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-300"
+          <div 
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+            style={{
+              position: "absolute",
+              bottom: "2rem",
+              left: "50%",
+              transform: "translateX(-50%)",
+              color: "white"
+            }}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              style={{ width: "1.5rem", height: "1.5rem" }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-20 relative overflow-hidden" style={{ paddingTop: "5rem", paddingBottom: "5rem", position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)" }}>
+          {/* Decorative Elements */}
+          <div 
+            style={{
+              position: "absolute",
+              top: "-10%",
+              right: "-10%",
+              width: "40rem",
+              height: "40rem",
+              background: "linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(79, 70, 229, 0.1))",
+              borderRadius: "50%",
+              filter: "blur(40px)"
+            }}
+          />
+          
+          <div className="max-w-7xl mx-auto px-6 relative z-10" style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "1.5rem", paddingRight: "1.5rem", position: "relative", zIndex: 10 }}>
+            <div className="text-center mb-16" style={{ textAlign: "center", marginBottom: "4rem" }}>
+              <h2 style={{ fontSize: "clamp(2.25rem, 4vw, 3rem)", fontWeight: "700", color: "#111827", marginBottom: "1.5rem" }}>
+                Why Small Businesses <span style={{ color: "#9333ea" }}>Choose Us</span>
+              </h2>
+              <p style={{ fontSize: "1.25rem", color: "#4b5563", maxWidth: "48rem", marginLeft: "auto", marginRight: "auto" }}>
+                We're not just another agency. We're your dedicated Shopify partners who understand what small businesses need.
+              </p>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
+              {[
+                {
+                  icon: "👥",
+                  title: "Direct Access to Founders",
+                  description: "No account managers or middlemen. Work directly with experienced Shopify developers who care about your success."
+                },
+                {
+                  icon: "⚡",
+                  title: "Lightning Fast Turnaround",
+                  description: "Your store ready in 2-4 weeks, not months. Small team means quick decisions and faster execution."
+                },
+                {
+                  icon: "💰",
+                  title: "Transparent, Fair Pricing",
+                  description: "No hidden fees or surprise costs. Lower overhead means better prices without compromising quality."
+                },
+                {
+                  icon: "🏪",
+                  title: "100% Shopify Focused",
+                  description: "We eat, sleep, and breathe Shopify. Deep expertise in the platform means better results for your store."
+                },
+                {
+                  icon: "🤝",
+                  title: "Ongoing Support Included",
+                  description: "We don't disappear after launch. Training, updates, and support to help your business grow."
+                },
+                {
+                  icon: "🎯",
+                  title: "Small Business Specialists",
+                  description: "We understand tight budgets and big dreams. Flexible solutions that grow with your business."
+                }
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    padding: "2rem",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    backdropFilter: "blur(10px)",
+                    borderRadius: "1.5rem",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                    textAlign: "center",
+                    transition: "all 0.3s ease"
+                  }}
                 >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  Terms of Service
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  Cookie Policy
-                </a>
-              </div>
+                  <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{item.icon}</div>
+                  <h3 style={{ fontSize: "1.25rem", fontWeight: "600", color: "#111827", marginBottom: "1rem" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "#4b5563", lineHeight: "1.6" }}>
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </footer>
-    </main>
+        </section>
+
+        {/* Our Process Section */}
+        <section className="py-20 relative" style={{ paddingTop: "5rem", paddingBottom: "5rem", position: "relative", background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)" }}>
+          <div className="max-w-7xl mx-auto px-6" style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "1.5rem", paddingRight: "1.5rem" }}>
+            <div className="text-center mb-16" style={{ textAlign: "center", marginBottom: "4rem" }}>
+              <h2 style={{ fontSize: "clamp(2.25rem, 4vw, 3rem)", fontWeight: "700", color: "white", marginBottom: "1.5rem" }}>
+                From Idea to <span style={{ color: "#c084fc" }}>Launch</span> in 4 Steps
+              </h2>
+              <p style={{ fontSize: "1.25rem", color: "#d1d5db", maxWidth: "48rem", marginLeft: "auto", marginRight: "auto" }}>
+                Our proven process gets your Shopify store online quickly and efficiently
+              </p>
+            </div>
+
+            <div style={{ position: "relative" }}>
+              {/* Timeline Line */}
+              <div 
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "10%",
+                  right: "10%",
+                  height: "2px",
+                  background: "linear-gradient(90deg, #9333ea, #c084fc)",
+                  transform: "translateY(-50%)",
+                  zIndex: 1
+                }}
+              />
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "2rem", position: "relative", zIndex: 2 }}>
+                {[
+                  {
+                    step: "01",
+                    title: "Discovery Call",
+                    description: "Free 30-minute consultation to understand your business goals and requirements",
+                    duration: "1 Day",
+                    color: "#9333ea"
+                  },
+                  {
+                    step: "02", 
+                    title: "Design & Setup",
+                    description: "Store creation, theme selection, and customization based on your brand",
+                    duration: "1-2 Weeks",
+                    color: "#c084fc"
+                  },
+                  {
+                    step: "03",
+                    title: "Review & Launch", 
+                    description: "Testing, final reviews, and going live with your new Shopify store",
+                    duration: "3-5 Days",
+                    color: "#a855f7"
+                  },
+                  {
+                    step: "04",
+                    title: "Training & Support",
+                    description: "Complete training on managing your store plus ongoing support",
+                    duration: "Ongoing",
+                    color: "#8b5cf6"
+                  }
+                ].map((process, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      textAlign: "center",
+                      position: "relative"
+                    }}
+                  >
+                    {/* Step Circle */}
+                    <div
+                      style={{
+                        width: "4rem",
+                        height: "4rem",
+                        backgroundColor: process.color,
+                        borderRadius: "50%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        margin: "0 auto 1.5rem auto",
+                        fontSize: "1.25rem",
+                        fontWeight: "700",
+                        color: "white",
+                        boxShadow: "0 10px 25px -5px rgba(147, 51, 234, 0.3)"
+                      }}
+                    >
+                      {process.step}
+                    </div>
+
+                    <div
+                      style={{
+                        backgroundColor: "rgba(255, 255, 255, 0.05)",
+                        backdropFilter: "blur(10px)",
+                        borderRadius: "1.5rem",
+                        padding: "2rem",
+                        border: "1px solid rgba(255, 255, 255, 0.1)"
+                      }}
+                    >
+                      <h3 style={{ fontSize: "1.25rem", fontWeight: "600", color: "white", marginBottom: "1rem" }}>
+                        {process.title}
+                      </h3>
+                      <p style={{ color: "#d1d5db", marginBottom: "1rem", lineHeight: "1.6" }}>
+                        {process.description}
+                      </p>
+                      <div
+                        style={{
+                          display: "inline-block",
+                          backgroundColor: process.color,
+                          color: "white",
+                          padding: "0.5rem 1rem",
+                          borderRadius: "9999px",
+                          fontSize: "0.875rem",
+                          fontWeight: "500"
+                        }}
+                      >
+                        {process.duration}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ textAlign: "center", marginTop: "4rem" }}>
+              <button
+                style={{
+                  backgroundColor: "#9333ea",
+                  color: "white",
+                  padding: "1rem 2rem",
+                  borderRadius: "9999px",
+                  fontWeight: "600",
+                  fontSize: "1.125rem",
+                  border: "none",
+                  cursor: "pointer",
+                  boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                  transition: "all 0.3s ease"
+                }}
+              >
+                Start Your Project Today
+                <svg
+                  style={{ width: "1.25rem", height: "1.25rem", marginLeft: "0.5rem", display: "inline-block" }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        
+        <section id="services" className="py-20 bg-gray-50" style={{ paddingTop: "5rem", paddingBottom: "5rem", backgroundColor: "#f9fafb" }}>
+          <div className="max-w-7xl mx-auto px-6" style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "1.5rem", paddingRight: "1.5rem" }}>
+            <div className="text-center mb-16" style={{ textAlign: "center", marginBottom: "4rem" }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style={{ fontSize: "clamp(2.25rem, 4vw, 3rem)", fontWeight: "700", color: "#111827", marginBottom: "1.5rem" }}>
+                Our <span className="text-purple-600" style={{ color: "#9333ea" }}>Web Services</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontSize: "1.25rem", color: "#4b5563", maxWidth: "48rem", marginLeft: "auto", marginRight: "auto" }}>
+                From custom development to digital strategy, we provide
+                comprehensive web solutions to grow your business and enhance your
+                online presence.
+              </p>
+            </div>
+            <div 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "2rem"
+              }}
+            >
+              {services.map((s, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100"
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "1rem",
+                    padding: "2rem",
+                    boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                    border: "1px solid #f3f4f6",
+                    transition: "all 0.3s ease"
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "4rem",
+                      height: "4rem",
+                      backgroundColor: s.color === 'purple' ? '#faf5ff' : s.color === 'blue' ? '#eff6ff' : s.color === 'green' ? '#f0fdf4' : s.color === 'orange' ? '#fff7ed' : s.color === 'pink' ? '#fdf2f8' : '#eef2ff',
+                      borderRadius: "1rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "1.5rem"
+                    }}
+                  >
+                    {s.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontSize: "1.5rem", fontWeight: "700", color: "#111827", marginBottom: "1rem" }}>
+                    {s.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6" style={{ color: "#4b5563", marginBottom: "1.5rem" }}>{s.description}</p>
+                  <ul style={{ listStyle: "none", padding: 0 }}>
+                    {s.bullets.map((b, i) => (
+                      <li key={i} className="flex items-center" style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
+                        <svg
+                          className="w-4 h-4 text-green-500 mr-2"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          style={{ width: "1rem", height: "1rem", color: "#10b981", marginRight: "0.5rem" }}
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span style={{ color: "#4b5563" }}>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 relative overflow-hidden" style={{ paddingTop: "5rem", paddingBottom: "5rem", position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%)" }}>
+          <div className="max-w-7xl mx-auto px-6" style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "1.5rem", paddingRight: "1.5rem" }}>
+            <div className="text-center mb-16" style={{ textAlign: "center", marginBottom: "4rem" }}>
+              <h2 style={{ fontSize: "clamp(2.25rem, 4vw, 3rem)", fontWeight: "700", color: "#111827", marginBottom: "1.5rem" }}>
+                Simple, <span style={{ color: "#9333ea" }}>Transparent</span> Pricing
+              </h2>
+              <p style={{ fontSize: "1.25rem", color: "#4b5563", maxWidth: "48rem", marginLeft: "auto", marginRight: "auto" }}>
+                Choose the package that fits your business needs. No hidden fees, no surprises.
+              </p>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem", alignItems: "stretch" }}>
+              {[
+                {
+                  name: "Starter",
+                  price: "$799",
+                  popular: false,
+                  description: "Perfect for new businesses getting started",
+                  features: [
+                    "Basic Shopify store setup",
+                    "Mobile-responsive theme",
+                    "Up to 25 products",
+                    "Payment gateway setup",
+                    "Basic SEO optimization",
+                    "2 weeks delivery",
+                    "Email support"
+                  ],
+                  buttonText: "Get Started",
+                  color: "#6366f1"
+                },
+                {
+                  name: "Professional",
+                  price: "$1,499",
+                  popular: true,
+                  description: "Most popular for growing businesses",
+                  features: [
+                    "Everything in Starter",
+                    "Custom theme modifications",
+                    "Up to 100 products",
+                    "5 essential apps setup",
+                    "Advanced SEO optimization",
+                    "Social media integration",
+                    "3 rounds of revisions",
+                    "Phone + email support"
+                  ],
+                  buttonText: "Most Popular",
+                  color: "#9333ea"
+                },
+                {
+                  name: "Premium",
+                  price: "$2,799",
+                  popular: false,
+                  description: "For established businesses wanting more",
+                  features: [
+                    "Everything in Professional",
+                    "Unlimited products",
+                    "10+ apps integration", 
+                    "Email marketing setup",
+                    "Analytics & tracking setup",
+                    "Staff training included",
+                    "30 days post-launch support",
+                    "Priority support"
+                  ],
+                  buttonText: "Go Premium",
+                  color: "#059669"
+                }
+              ].map((pkg, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    position: "relative",
+                    backgroundColor: "white",
+                    borderRadius: "2rem",
+                    padding: pkg.popular ? "2.5rem 2rem" : "2rem",
+                    boxShadow: pkg.popular ? "0 25px 50px -12px rgba(147, 51, 234, 0.25)" : "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+                    border: pkg.popular ? "2px solid #9333ea" : "1px solid #e5e7eb",
+                    transform: pkg.popular ? "scale(1.05)" : "scale(1)",
+                    transition: "all 0.3s ease"
+                  }}
+                >
+                  {pkg.popular && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "-0.75rem",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        backgroundColor: "#9333ea",
+                        color: "white",
+                        padding: "0.5rem 1.5rem",
+                        borderRadius: "9999px",
+                        fontSize: "0.875rem",
+                        fontWeight: "600"
+                      }}
+                    >
+                      Most Popular
+                    </div>
+                  )}
+
+                  <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+                    <h3 style={{ fontSize: "1.5rem", fontWeight: "700", color: "#111827", marginBottom: "0.5rem" }}>
+                      {pkg.name}
+                    </h3>
+                    <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "1rem" }}>
+                      {pkg.description}
+                    </p>
+                    <div style={{ marginBottom: "1rem" }}>
+                      <span style={{ fontSize: "3rem", fontWeight: "700", color: pkg.color }}>
+                        {pkg.price}
+                      </span>
+                      <span style={{ color: "#6b7280", fontSize: "1rem" }}> one-time</span>
+                    </div>
+                  </div>
+
+                  <ul style={{ listStyle: "none", padding: 0, marginBottom: "2rem" }}>
+                    {pkg.features.map((feature, featureIdx) => (
+                      <li
+                        key={featureIdx}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          marginBottom: "0.75rem"
+                        }}
+                      >
+                        <svg
+                          style={{ width: "1.25rem", height: "1.25rem", color: "#10b981", marginRight: "0.75rem", flexShrink: 0 }}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span style={{ color: "#374151", fontSize: "0.875rem" }}>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button
+                    style={{
+                      width: "100%",
+                      backgroundColor: pkg.color,
+                      color: "white",
+                      padding: "1rem",
+                      borderRadius: "1rem",
+                      fontWeight: "600",
+                      fontSize: "1rem",
+                      border: "none",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    {pkg.buttonText}
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ textAlign: "center", marginTop: "3rem" }}>
+              <p style={{ color: "#6b7280", marginBottom: "1rem" }}>
+                Need something custom? All packages can be tailored to your specific needs.
+              </p>
+              <button
+                style={{
+                  backgroundColor: "transparent",
+                  color: "#9333ea",
+                  padding: "0.75rem 1.5rem",
+                  borderRadius: "0.5rem",
+                  fontWeight: "600",
+                  border: "2px solid #9333ea",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease"
+                }}
+              >
+                Request Custom Quote
+              </button>
+            </div>
+          </div>
+        </section>
+        
+        <section id="portfolio" className="py-20 bg-gray-900" style={{ paddingTop: "5rem", paddingBottom: "5rem", backgroundColor: "#111827" }}>
+          <div className="max-w-7xl mx-auto px-6" style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "1.5rem", paddingRight: "1.5rem" }}>
+            <div className="text-center mb-16" style={{ textAlign: "center", marginBottom: "4rem" }}>
+              <h2 style={{ fontSize: "clamp(2.25rem, 4vw, 3rem)", fontWeight: "700", color: "white", marginBottom: "1.5rem" }}>
+                Aren't these truly{" "}
+                <span style={{ color: "#c084fc" }}>remarkable?</span>
+              </h2>
+              <p style={{ fontSize: "1.25rem", color: "#d1d5db", maxWidth: "48rem", marginLeft: "auto", marginRight: "auto" }}>
+                Explore our latest projects that have transformed
+                businesses and delivered exceptional results.
+              </p>
+            </div>
+            <div 
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                gap: "1.5rem"
+              }}
+            >
+              {projects.map((project, i) => (
+                <div
+                  key={project.id}
+                  onClick={() => openProject(project.id)}
+                  style={{
+                    position: "relative",
+                    overflow: "hidden",
+                    borderRadius: "1rem",
+                    background: "linear-gradient(to bottom right, #374151, #111827)",
+                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                    cursor: "pointer",
+                    transition: "all 0.5s ease"
+                  }}
+                >
+                  <div style={{ padding: "1.5rem" }}>
+                    <div
+                      style={{
+                        backgroundColor: project.id === 'blue-ruby' ? '#2563eb' : project.id === 'sidekick' ? '#ea580c' : project.id === 'wolf-circus' ? '#d97706' : '#4f46e5',
+                        borderRadius: "0.75rem",
+                        padding: "1rem",
+                        marginBottom: "1rem",
+                        width: "fit-content"
+                      }}
+                    >
+                      <span style={{ color: "white", fontWeight: "700", fontSize: "1.125rem" }}>
+                        {project.name}
+                      </span>
+                    </div>
+                    <div 
+                      style={{
+                        backgroundColor: "#374151",
+                        borderRadius: "0.75rem",
+                        overflow: "hidden",
+                        marginBottom: "1rem",
+                        aspectRatio: "16/9"
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          background: project.id === 'blue-ruby' ? 'linear-gradient(to bottom right, #3b82f6, #4f46e5)' : 
+                                    project.id === 'sidekick' ? 'linear-gradient(to bottom right, #f97316, #dc2626)' :
+                                    project.id === 'wolf-circus' ? 'linear-gradient(to bottom right, #d97706, #a16207)' :
+                                    'linear-gradient(to bottom right, #4f46e5, #7c3aed)',
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          position: "relative"
+                        }}
+                      >
+                        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <div style={{ color: "white", fontSize: "0.875rem", opacity: 0.5 }}>
+                            Project Preview
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h3 style={{ color: "white", fontWeight: "700", fontSize: "1.25rem", marginBottom: "0.5rem" }}>
+                      {project.brand}
+                    </h3>
+                    <p style={{ color: "#9ca3af", fontSize: "0.875rem", marginBottom: "1rem" }}>
+                      {project.description}
+                    </p>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "1rem" }}>
+                      {project.tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          style={{
+                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                            color: "white",
+                            padding: "0.25rem 0.5rem",
+                            borderRadius: "0.25rem",
+                            fontSize: "0.75rem"
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <p style={{ color: "#6b7280", fontSize: "0.75rem" }}>{project.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ textAlign: "center", marginTop: "3rem" }}>
+              <button 
+                style={{
+                  backgroundColor: "#9333ea",
+                  color: "white",
+                  padding: "1rem 2rem",
+                  borderRadius: "9999px",
+                  fontWeight: "600",
+                  fontSize: "1.125rem",
+                  border: "none",
+                  cursor: "pointer",
+                  boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+                }}
+              >
+                View All Projects
+                <svg
+                  style={{ width: "1.25rem", height: "1.25rem", marginLeft: "0.5rem", display: "inline-block" }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
   )
 }
+
+export const Head = () => <Seo title="Home" />
 
 export default IndexPage
