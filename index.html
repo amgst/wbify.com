@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Professional Services</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #312e81 100%);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="min-h-screen gradient-bg relative overflow-hidden">
+        
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-purple-600 rounded-full opacity-20" style="filter: blur(60px);"></div>
+            <div class="absolute bottom-20 right-10 w-80 h-80 bg-blue-600 rounded-full opacity-20" style="filter: blur(60px);"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="relative z-10 flex items-center justify-between p-6 lg:px-12">
+            <div class="text-2xl font-bold text-white">
+                ShopifyPro
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-white hover:text-purple-300 transition-colors duration-300">Services</a>
+                <a href="#" class="text-white hover:text-purple-300 transition-colors duration-300">Portfolio</a>
+                <a href="#" class="text-white hover:text-purple-300 transition-colors duration-300">About</a>
+                <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover-scale">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Hero Content -->
+        <div class="relative z-10 flex items-center justify-center min-h-screen px-6 -mt-20">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="text-center lg:text-left">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-green-600 bg-opacity-20 text-green-300 text-sm mb-6">
+                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                        Available for New Projects
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        Professional
+                        <span class="text-purple-400">Web Development</span>
+                        Services
+                    </h1>
+
+                    <!-- Subheading -->
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+                        Transform your digital vision into reality with custom websites, e-commerce stores, and web applications that drive growth and enhance user experience.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="flex justify-center lg:justify-start gap-8 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">150+</div>
+                            <div class="text-gray-400 text-sm">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">5.0★</div>
+                            <div class="text-gray-400 text-sm">Client Rating</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">24/7</div>
+                            <div class="text-gray-400 text-sm">Support</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover-scale shadow-lg">
+                            Start Your Project
+                            <svg class="inline-block w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </button>
+                        <button class="border-2 border-white border-opacity-30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300">
+                            View Portfolio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Content - Service Showcase -->
+                <div class="relative animate-float">
+                    <!-- Main Service Card -->
+                    <div class="glass rounded-3xl p-8 shadow-2xl">
+                        
+                        <!-- Shopify Logo -->
+                        <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 13h8V3c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v10zm0 8h8v-6H3v6zm10 0h8V11c0-1.1-.9-2-2-2h-6v10zm0-18v6h8V3c0-1.1-.9-2-2-2h-6z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Services List -->
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
+                                <div class="w-3 h-3 bg-green-400 rounded-full mr-4"></div>
+                                <span class="text-white font-medium">Custom Website Development</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
+                                <div class="w-3 h-3 bg-blue-400 rounded-full mr-4"></div>
+                                <span class="text-white font-medium">E-commerce Solutions</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
+                                <div class="w-3 h-3 bg-purple-400 rounded-full mr-4"></div>
+                                <span class="text-white font-medium">Web Application Development</span>
+                            </div>
+                            <div class="flex items-center p-4 bg-white bg-opacity-5 rounded-xl border border-white border-opacity-10">
+                                <div class="w-3 h-3 bg-pink-400 rounded-full mr-4"></div>
+                                <span class="text-white font-medium">Digital Strategy Consulting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Stats Cards -->
+                    <div class="absolute -top-6 -left-6 glass rounded-2xl p-4 shadow-xl">
+                        <div class="text-2xl font-bold text-white">99%</div>
+                        <div class="text-gray-300 text-sm">Success Rate</div>
+                    </div>
+
+                    <div class="absolute -bottom-6 -right-6 glass rounded-2xl p-4 shadow-xl">
+                        <div class="text-2xl font-bold text-white">48h</div>
+                        <div class="text-gray-300 text-sm">Quick Start</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Our <span class="text-purple-600">Web Services</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From custom development to digital strategy, we provide comprehensive web solutions to grow your business and enhance your online presence.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">E-commerce Development</h3>
+                    <p class="text-gray-600 mb-6">Build powerful online stores with custom features, payment integrations, and optimized user experiences.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Shopify & WooCommerce
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Payment Gateway Integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Inventory Management
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Application Development</h3>
+                    <p class="text-gray-600 mb-6">Create powerful web applications with modern frameworks and cutting-edge technologies.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            React & Next.js
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Database Integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Cloud Deployment
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">UI/UX Design & Development</h3>
+                    <p class="text-gray-600 mb-6">Design and develop beautiful, user-friendly interfaces that engage and convert visitors.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Modern Design Systems
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            User Experience Research
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Conversion Optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border border-gray-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Performance Optimization</h3>
+                    <p class="text-gray-600 mb-6">Speed up your store and improve conversion rates with our optimization services.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Speed Optimization
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Code Cleanup
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Image Optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border border-gray-100">
+                    <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Digital Strategy & Consulting</h3>
+                    <p class="text-gray-600 mb-6">Get expert guidance on digital transformation, technology stack, and growth strategies.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Technology Assessment
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Growth Planning
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Digital Transformation
+                        </li>
+                    </ul>
+                            </svg>
+                            24/7 Monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Bug Fixes
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Updates & Security
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale border border-gray-100">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Analytics & Performance Optimization</h3>
+                    <p class="text-gray-600 mb-6">Monitor, analyze, and optimize your website's performance to maximize conversions and user satisfaction.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Custom Analytics Dashboards
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Performance Monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Conversion Rate Optimization
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Aren't these truly <span class="text-purple-400">remarkable?</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Explore our latest Shopify projects that have transformed businesses and delivered exceptional results.
+                </p>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Project 1 - Blue Ruby -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="openProject('blue-ruby')">
+                    <div class="p-6">
+                        <!-- Project Logo/Brand -->
+                        <div class="bg-blue-600 rounded-xl p-4 mb-4 w-fit">
+                            <span class="text-white font-bold text-lg">blue ruby</span>
+                        </div>
+                        
+                        <!-- Project Preview Image -->
+                        <div class="bg-gray-700 rounded-xl overflow-hidden mb-4 aspect-video">
+                            <div class="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center relative">
+                                <!-- Simulated Website Preview -->
+                                <div class="w-full h-full relative">
+                                    <div class="absolute top-2 left-2 right-2 h-6 bg-white bg-opacity-10 rounded"></div>
+                                    <div class="absolute top-10 left-2 right-2 bottom-2 bg-white bg-opacity-5 rounded grid grid-cols-3 gap-1 p-2">
+                                        <div class="bg-white bg-opacity-20 rounded"></div>
+                                        <div class="bg-white bg-opacity-15 rounded"></div>
+                                        <div class="bg-white bg-opacity-10 rounded"></div>
+                                        <div class="bg-white bg-opacity-15 rounded col-span-2"></div>
+                                        <div class="bg-white bg-opacity-20 rounded"></div>
+                                    </div>
+                                </div>
+                                <!-- Hover Overlay -->
+                                <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                    <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">View Project →</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Info -->
+                        <h3 class="text-white font-bold text-xl mb-2">Blue Ruby Jewelry</h3>
+                        <p class="text-gray-400 text-sm mb-4">Luxury jewelry e-commerce with custom product configurator</p>
+                        
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-600 bg-opacity-20 text-blue-400 px-2 py-1 rounded text-xs">E-commerce</span>
+                            <span class="bg-purple-600 bg-opacity-20 text-purple-400 px-2 py-1 rounded text-xs">Custom App</span>
+                        </div>
+                        
+                        <!-- Date -->
+                        <p class="text-gray-500 text-xs">Dec 15, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 - SideKick -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="openProject('sidekick')">
+                    <div class="p-6">
+                        <!-- Project Logo/Brand -->
+                        <div class="bg-orange-500 rounded-xl p-4 mb-4 w-fit">
+                            <span class="text-white font-bold text-lg">SIDEKICK</span>
+                        </div>
+                        
+                        <!-- Project Preview Image -->
+                        <div class="bg-gray-700 rounded-xl overflow-hidden mb-4 aspect-video">
+                            <div class="w-full h-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative">
+                                <!-- Simulated Website Preview -->
+                                <div class="w-full h-full relative">
+                                    <div class="absolute top-2 left-2 right-2 h-6 bg-white bg-opacity-10 rounded"></div>
+                                    <div class="absolute top-10 left-2 right-10 bottom-6 bg-white bg-opacity-5 rounded"></div>
+                                    <div class="absolute top-10 right-2 bottom-2 w-8 bg-white bg-opacity-10 rounded"></div>
+                                    <div class="absolute bottom-2 left-2 right-10 h-4 bg-white bg-opacity-15 rounded"></div>
+                                </div>
+                                <!-- Hover Overlay -->
+                                <div class="absolute inset-0 bg-orange-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                    <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">View Project →</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Info -->
+                        <h3 class="text-white font-bold text-xl mb-2">SideKick Tools</h3>
+                        <p class="text-gray-400 text-sm mb-4">Professional tools marketplace with advanced search and filtering</p>
+                        
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-600 bg-opacity-20 text-orange-400 px-2 py-1 rounded text-xs">Marketplace</span>
+                            <span class="bg-green-600 bg-opacity-20 text-green-400 px-2 py-1 rounded text-xs">B2B</span>
+                        </div>
+                        
+                        <!-- Date -->
+                        <p class="text-gray-500 text-xs">Nov 28, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Wolf Circus -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="openProject('wolf-circus')">
+                    <div class="p-6">
+                        <!-- Project Logo/Brand -->
+                        <div class="bg-amber-600 rounded-xl p-4 mb-4 w-fit">
+                            <span class="text-white font-bold text-lg">WOLF CIRCUS</span>
+                        </div>
+                        
+                        <!-- Project Preview Image -->
+                        <div class="bg-gray-700 rounded-xl overflow-hidden mb-4 aspect-video">
+                            <div class="w-full h-full bg-gradient-to-br from-amber-600 to-yellow-700 flex items-center justify-center relative">
+                                <!-- Simulated Website Preview -->
+                                <div class="w-full h-full relative">
+                                    <div class="absolute top-2 left-2 right-2 h-4 bg-white bg-opacity-10 rounded"></div>
+                                    <div class="absolute top-8 left-2 right-2 h-8 bg-white bg-opacity-5 rounded"></div>
+                                    <div class="absolute top-18 left-2 right-2 bottom-2 bg-white bg-opacity-5 rounded grid grid-cols-2 gap-1 p-2">
+                                        <div class="bg-white bg-opacity-20 rounded"></div>
+                                        <div class="bg-white bg-opacity-15 rounded"></div>
+                                        <div class="bg-white bg-opacity-10 rounded col-span-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Hover Overlay -->
+                                <div class="absolute inset-0 bg-amber-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                    <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">View Project →</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Info -->
+                        <h3 class="text-white font-bold text-xl mb-2">Wolf Circus</h3>
+                        <p class="text-gray-400 text-sm mb-4">Modern jewelry brand with AR try-on functionality</p>
+                        
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-amber-600 bg-opacity-20 text-amber-400 px-2 py-1 rounded text-xs">Fashion</span>
+                            <span class="bg-pink-600 bg-opacity-20 text-pink-400 px-2 py-1 rounded text-xs">AR/VR</span>
+                        </div>
+                        
+                        <!-- Date -->
+                        <p class="text-gray-500 text-xs">Oct 12, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 - PrintNinja -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="openProject('printninja')">
+                    <div class="p-6">
+                        <!-- Project Logo/Brand -->
+                        <div class="bg-indigo-600 rounded-xl p-4 mb-4 w-fit">
+                            <span class="text-white font-bold text-lg">PrintNinja</span>
+                        </div>
+                        
+                        <!-- Project Preview Image -->
+                        <div class="bg-gray-700 rounded-xl overflow-hidden mb-4 aspect-video">
+                            <div class="w-full h-full bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center relative">
+                                <!-- Simulated Website Preview -->
+                                <div class="w-full h-full relative">
+                                    <div class="absolute top-2 left-2 right-2 h-6 bg-white bg-opacity-10 rounded"></div>
+                                    <div class="absolute top-10 left-2 w-1/3 bottom-2 bg-white bg-opacity-5 rounded"></div>
+                                    <div class="absolute top-10 right-2 w-2/3 bottom-2 bg-white bg-opacity-5 rounded ml-2 grid grid-cols-3 gap-1 p-2">
+                                        <div class="bg-white bg-opacity-20 rounded"></div>
+                                        <div class="bg-white bg-opacity-15 rounded"></div>
+                                        <div class="bg-white bg-opacity-20 rounded"></div>
+                                        <div class="bg-white bg-opacity-10 rounded col-span-3"></div>
+                                    </div>
+                                </div>
+                                <!-- Hover Overlay -->
+                                <div class="absolute inset-0 bg-indigo-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                    <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">View Project →</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Info -->
+                        <h3 class="text-white font-bold text-xl mb-2">PrintNinja</h3>
+                        <p class="text-gray-400 text-sm mb-4">Custom printing service with real-time quote calculator</p>
+                        
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-600 bg-opacity-20 text-indigo-400 px-2 py-1 rounded text-xs">Print Services</span>
+                            <span class="bg-green-600 bg-opacity-20 text-green-400 px-2 py-1 rounded text-xs">Calculator</span>
+                        </div>
+                        
+                        <!-- Date -->
+                        <p class="text-gray-500 text-xs">Sep 05, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Projects Button -->
+            <div class="text-center mt-12">
+                <button class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover-scale shadow-lg">
+                    View All Projects
+                    <svg class="inline-block w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Client <span class="text-purple-600">Success Stories</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hear from businesses that have transformed their e-commerce presence with our Shopify solutions.
+                </p>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"ShopifyPro transformed our online store completely. The custom features they built increased our conversion rate by 340%. Their team is incredibly professional and responsive."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-purple-600 font-bold text-lg">SJ</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Sarah Johnson</div>
+                            <div class="text-gray-600 text-sm">CEO, Fashion Forward</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"The custom app they developed for our marketplace saved us thousands in monthly fees. Their expertise in Shopify development is unmatched."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold text-lg">MC</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Mike Chen</div>
+                            <div class="text-gray-600 text-sm">Founder, TechMart</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"Outstanding service! They delivered our subscription-based store ahead of schedule. The automated billing system works flawlessly and our customer retention improved by 180%."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-green-600 font-bold text-lg">LR</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Lisa Rodriguez</div>
+                            <div class="text-gray-600 text-sm">Co-founder, WellnessHub</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-16">
+                <div class="glass rounded-3xl p-12 max-w-4xl mx-auto" style="background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%);">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Ready to Transform Your Shopify Store?
+                    </h3>
+                    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                        Join 150+ successful businesses who've trusted us to build their dream e-commerce stores.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover-scale shadow-lg">
+                            Get Free Consultation
+                        </button>
+                        <button class="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300">
+                            View Our Process
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Frequently Asked <span class="text-purple-600">Questions</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Get answers to common questions about our web development services and process.
+                </p>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(1)">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-900 pr-8">How long does it take to build a custom website?</h3>
+                            <svg id="icon-1" class="w-6 h-6 text-purple-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="content-1" class="hidden px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex web applications can take 6-12 weeks. We provide detailed timelines and milestones during our initial consultation to set clear expectations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(2)">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-900 pr-8">Do you provide ongoing support after the store is launched?</h3>
+                            <svg id="icon-2" class="w-6 h-6 text-purple-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="content-2" class="hidden px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">Yes! We offer comprehensive ongoing support including 24/7 monitoring, security updates, bug fixes, and feature enhancements. Our support packages range from basic maintenance to full-service management depending on your needs.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(3)">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-900 pr-8">What's included in your Shopify development service?</h3>
+                            <svg id="icon-3" class="w-6 h-6 text-purple-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="content-3" class="hidden px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">Our service includes custom theme development, responsive design, SEO optimization, payment gateway integration, inventory setup, performance optimization, testing, training, and 30 days of free support post-launch.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(4)">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-900 pr-8">Can you help migrate from other e-commerce platforms to Shopify?</h3>
+                            <svg id="icon-4" class="w-6 h-6 text-purple-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="content-4" class="hidden px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">Absolutely! We specialize in seamless migrations from platforms like WooCommerce, Magento, BigCommerce, and others. We handle product data, customer information, order history, and ensure zero downtime during the transition.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(5)">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-900 pr-8">What are your pricing packages?</h3>
+                            <svg id="icon-5" class="w-6 h-6 text-purple-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="content-5" class="hidden px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">We offer flexible pricing starting from $2,500 for basic stores, $5,000-$10,000 for advanced custom stores, and $15,000+ for enterprise solutions with custom apps. All projects include a detailed quote based on your specific requirements.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(6)">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-900 pr-8">Do you work with clients internationally?</h3>
+                            <svg id="icon-6" class="w-6 h-6 text-purple-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="content-6" class="hidden px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">Yes, we work with clients worldwide! We're experienced in different markets, currencies, languages, and compliance requirements. Our remote collaboration process ensures smooth communication across time zones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="text-2xl font-bold mb-4">Wbify</div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Professional web development agency transforming digital visions into reality. Building high-performance websites and applications since 2020.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.219-.359-1.219c0-1.14.66-1.989 1.483-1.989.699 0 1.037.524 1.037 1.155 0 .703-.449 1.753-.68 2.724-.194.821.412 1.492 1.219 1.492 1.463 0 2.589-1.544 2.589-3.77 0-1.97-1.414-3.348-3.43-3.348-2.337 0-3.708 1.753-3.708 3.565 0 .706.272 1.462.611 1.873.067.082.077.154.057.238-.061.254-.196.796-.223.907-.035.146-.116.177-.268.107-1.001-.465-1.624-1.926-1.624-3.1 0-2.591 1.885-4.971 5.432-4.971 2.852 0 5.071 2.033 5.071 4.749 0 2.835-1.789 5.114-4.27 5.114-.833 0-1.618-.435-1.887-1.009l-.518 1.971c-.185.735-.685 1.656-1.021 2.217.769.238 1.559.365 2.383.365 6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">E-commerce Development</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Web Application Development</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">UI/UX Design</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Performance Optimization</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Digital Strategy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Ongoing Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Process</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Stay Updated</h3>
+                    <p class="text-gray-400 mb-4">Get the latest Shopify tips and updates delivered to your inbox.</p>
+                    
+                    <!-- Newsletter Signup -->
+                    <div class="mb-6">
+                        <div class="flex">
+                            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-600">
+                            <button class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-r-lg transition-colors duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            hello@wbify.com
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            +1 (555) 123-4567
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-6 py-6">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2025 ShopifyPro. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for FAQ Functionality -->
+    <script>
+        function toggleFAQ(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Project navigation function
+        function openProject(projectId) {
+            // In a real application, this would navigate to a detailed project page
+            // For demo purposes, we'll show an alert with project info
+            const projects = {
+                'blue-ruby': {
+                    title: 'Blue Ruby Jewelry',
+                    description: 'Luxury jewelry e-commerce with custom product configurator',
+                    url: 'project-blue-ruby.html'
+                },
+                'sidekick': {
+                    title: 'SideKick Tools',
+                    description: 'Professional tools marketplace with advanced search',
+                    url: 'project-sidekick.html'
+                },
+                'wolf-circus': {
+                    title: 'Wolf Circus',
+                    description: 'Modern jewelry brand with AR try-on functionality',
+                    url: 'project-wolf-circus.html'
+                },
+                'printninja': {
+                    title: 'PrintNinja',
+                    description: 'Custom printing service with quote calculator',
+                    url: 'project-printninja.html'
+                }
+            };
+
+            const project = projects[projectId];
+            if (project) {
+                // In a real app, you would navigate to the project page:
+                // window.location.href = project.url;
+                
+                // For demo, show project info
+                alert(`Opening: ${project.title}\n${project.description}\n\nIn a real application, this would navigate to: ${project.url}`);
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
