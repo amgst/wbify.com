@@ -586,6 +586,71 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     </div>
 </footer>
 
-   
+       <!-- JavaScript for FAQ Functionality -->
+    <script>
+        function toggleFAQ(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Project navigation function
+        function openProject(projectId) {
+            // In a real application, this would navigate to a detailed project page
+            // For demo purposes, we'll show an alert with project info
+            const projects = {
+                'blue-ruby': {
+                    title: 'Blue Ruby Jewelry',
+                    description: 'Luxury jewelry e-commerce with custom product configurator',
+                    url: 'project-blue-ruby.html'
+                },
+                'sidekick': {
+                    title: 'SideKick Tools',
+                    description: 'Professional tools marketplace with advanced search',
+                    url: 'project-sidekick.html'
+                },
+                'wolf-circus': {
+                    title: 'Wolf Circus',
+                    description: 'Modern jewelry brand with AR try-on functionality',
+                    url: 'project-wolf-circus.html'
+                },
+                'printninja': {
+                    title: 'PrintNinja',
+                    description: 'Custom printing service with quote calculator',
+                    url: 'project-printninja.html'
+                }
+            };
+
+            const project = projects[projectId];
+            if (project) {
+                // In a real app, you would navigate to the project page:
+                // window.location.href = project.url;
+                
+                // For demo, show project info
+                alert(`Opening: ${project.title}\n${project.description}\n\nIn a real application, this would navigate to: ${project.url}`);
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
