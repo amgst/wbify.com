@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 // Example blog data (should be shared or fetched in a real app)
 const blogPosts = [
@@ -46,15 +48,19 @@ const BlogDetail = () => {
   }
 
   return (
-    <main className="max-w-2xl mx-auto py-12 px-4">
-      <Link to="/blog" className="text-purple-700 hover:underline">&larr; Back to Blog</Link>
-      <h1 className="text-4xl font-bold mb-4 mt-4">{post.title}</h1>
-      <span className="text-sm text-gray-400 mb-6 block">{post.date}</span>
-      {post.image && (
-        <img src={post.image} alt={post.title} className="w-full h-64 object-cover rounded-lg shadow mb-6" />
-      )}
-      <div className="text-lg text-gray-700 mb-8">{post.content}</div>
-    </main>
+    <>
+      <Navigation />
+      <main className="max-w-2xl mx-auto py-24 px-4">
+        <Link to="/blog" className="text-purple-700 hover:underline">&larr; Back to Blog</Link>
+        <h1 className="text-4xl font-bold mb-4 mt-4">{post.title}</h1>
+        <span className="text-sm text-gray-400 mb-6 block">{post.date}</span>
+        {post.image && (
+          <img src={post.image} alt={post.title} className="w-full h-64 object-cover rounded-lg shadow mb-6" />
+        )}
+        <div className="text-lg text-gray-700 mb-8">{post.content}</div>
+      </main>
+      <Footer />
+    </>
   );
 };
 
