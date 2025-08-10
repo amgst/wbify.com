@@ -1,6 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './index.css';
+import { initGA, trackPageView } from './utils/analytics';
 
 // Import components
 
@@ -14,9 +15,26 @@ import NewsletterManager from './components/NewsletterManager';
 import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetail';
 
+// Component to track page views
+function Analytics() {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
+
+  return null;
+}
+
 function App() {
+  useEffect(() => {
+    // Initialize Google Analytics when the app loads
+    initGA();
+  }, []);
+
   return (
     <Router>
+      <Analytics />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />

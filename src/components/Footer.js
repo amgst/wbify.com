@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { trackNewsletterSignup } from '../utils/analytics';
 
 const Footer = () => {
   return (
@@ -103,6 +104,9 @@ const Footer = () => {
             <div className="flex-shrink-0">
               <button
                 onClick={() => {
+                  // Track newsletter signup attempt
+                  trackNewsletterSignup();
+                  
                   // Calculate center position
                   const screenWidth = window.screen.width;
                   const screenHeight = window.screen.height;

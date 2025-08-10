@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { getBlogPostBySlug } from '../data/blog';
+import { trackBlogView } from '../utils/analytics';
 
 const BlogDetail = () => {
   const { slug } = useParams();
   const post = getBlogPostBySlug(slug);
+
+  // Track blog post view
+  useEffect(() => {
+    if (post) {
+      trackBlogView(post.title);
+    }
+  }, [post]);
 
   if (!post) {
     return (
