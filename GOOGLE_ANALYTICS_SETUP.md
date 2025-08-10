@@ -15,7 +15,9 @@ The Google Analytics implementation has been completely restructured to work pro
 - Includes custom event tracking
 
 ### 3. **Environment Configuration**
-- Added `.env` file with `REACT_APP_GA_TRACKING_ID=G-M05VH6MN4L`
+**Set Environment Variable in Vercel:**
+- Variable: `REACT_APP_GA_TRACKING_ID`
+- Value: `G-EB1Z519BGJ`
 - Analytics only loads in production (not during development)
 
 ### 4. **Automatic Tracking**
@@ -28,13 +30,13 @@ The Google Analytics implementation has been completely restructured to work pro
 ### Option 1: Environment Variables in Vercel Dashboard
 1. Go to your Vercel project dashboard
 2. Navigate to Settings → Environment Variables
-3. Add: `REACT_APP_GA_TRACKING_ID` = `G-M05VH6MN4L`
+3. Add: `REACT_APP_GA_TRACKING_ID` = `G-EB1Z519BGJ`
 4. Redeploy your project
 
 ### Option 2: Vercel CLI
 ```bash
 vercel env add REACT_APP_GA_TRACKING_ID
-# Enter: G-M05VH6MN4L
+# Enter: G-EB1Z519BGJ
 # Select: Production, Preview, Development (or just Production)
 vercel --prod
 ```

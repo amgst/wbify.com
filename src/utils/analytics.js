@@ -1,5 +1,5 @@
 // Google Analytics configuration for React app
-export const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-M05VH6MN4L';
+export const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-EB1Z519BGJ';
 
 // Initialize Google Analytics
 export const initGA = () => {
