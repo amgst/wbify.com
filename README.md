@@ -1,1 +1,1 @@
-Hosted on github pages. Full HTML version
+Hosted on versal, domain on godaddy
