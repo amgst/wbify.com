@@ -107,6 +107,7 @@
                         <span class="font-semibold">Failed to send message.</span>
                     </div>
                     <p class="mt-1">Please try again or contact us directly at hello@wbify.com</p>
+                    <p id="errorDetails" class="mt-2 text-sm font-mono bg-red-50 p-2 rounded"></p>
                 </div>
 
                 <form class="space-y-6" id="contactForm">
@@ -319,70 +320,100 @@
 </section>
 
 <script>
-// EmailJS Configuration
-(function() {
-    emailjs.init("AqDnqVv2hY1HK6N2B"); // Replace with your EmailJS public key
-})();
-
-// Form Submission Handler
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+// Wait for EmailJS SDK to load before initializing
+window.addEventListener('load', function() {
+    // Check if EmailJS is loaded
+    if (typeof emailjs === 'undefined') {
+        console.error('EmailJS SDK not loaded! Check the script tag.');
+        return;
+    }
     
-    const submitBtn = document.getElementById('submitBtn');
-    const submitText = document.getElementById('submitText');
-    const loadingText = document.getElementById('loadingText');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
+    // EmailJS Configuration
+    try {
+        emailjs.init("AqDnqVv2hY1HK6N2B"); // Your EmailJS public key
+        console.log('EmailJS initialized successfully');
+    } catch (error) {
+        console.error('EmailJS initialization error:', error);
+    }
     
-    // Hide any previous messages
-    successMessage.classList.add('hidden');
-    errorMessage.classList.add('hidden');
+    // Form Submission Handler
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) {
+        console.error('Contact form not found!');
+        return;
+    }
     
-    // Show loading state
-    submitBtn.disabled = true;
-    submitText.classList.add('hidden');
-    loadingText.classList.remove('hidden');
-    
-    // Collect form data
-    const formData = {
-        firstName: document.getElementById('firstName').value,
-        lastName: document.getElementById('lastName').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value || 'Not provided',
-        company: document.getElementById('company').value || 'Not provided',
-        projectType: document.getElementById('projectType').value,
-        budget: document.getElementById('budget').value || 'Not specified',
-        timeline: document.getElementById('timeline').value || 'Not specified',
-        message: document.getElementById('message').value,
-        newsletter: document.getElementById('newsletter').checked ? 'Yes' : 'No',
-        date: new Date().toLocaleString()
-    };
-    
-    // Send email using EmailJS
-    emailjs.send('service_vxy8w6g', 'template_rnk7xs1', formData)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            
-            // Show success message
-            successMessage.classList.remove('hidden');
-            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // Reset form
-            document.getElementById('contactForm').reset();
-            
-        }, function(error) {
-            console.error('FAILED...', error);
-            
-            // Show error message
-            errorMessage.classList.remove('hidden');
-            errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-        }).finally(function() {
-            // Reset button state
-            submitBtn.disabled = false;
-            submitText.classList.remove('hidden');
-            loadingText.classList.add('hidden');
-        });
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const submitText = document.getElementById('submitText');
+        const loadingText = document.getElementById('loadingText');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const errorDetails = document.getElementById('errorDetails');
+        
+        // Hide any previous messages
+        successMessage.classList.add('hidden');
+        errorMessage.classList.add('hidden');
+        if (errorDetails) errorDetails.textContent = '';
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.classList.add('hidden');
+        loadingText.classList.remove('hidden');
+        
+        // Collect form data
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value || 'Not provided',
+            company: document.getElementById('company').value || 'Not provided',
+            projectType: document.getElementById('projectType').value,
+            budget: document.getElementById('budget').value || 'Not specified',
+            timeline: document.getElementById('timeline').value || 'Not specified',
+            message: document.getElementById('message').value,
+            newsletter: document.getElementById('newsletter').checked ? 'Yes' : 'No',
+            date: new Date().toLocaleString()
+        };
+        
+        console.log('Sending email with data:', formData);
+        console.log('Service ID: service_vxy8w6g');
+        console.log('Template ID: template_rnk7xs1');
+        
+        // Send email using EmailJS
+        emailjs.send('service_vxy8w6g', 'template_rnk7xs1', formData)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                console.log('Full response:', response);
+                
+                // Show success message
+                successMessage.classList.remove('hidden');
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset form
+                contactForm.reset();
+                
+            }, function(error) {
+                console.error('EMAILJS ERROR:', error);
+                console.error('Error status:', error.status);
+                console.error('Error text:', error.text);
+                
+                // Show detailed error message
+                errorMessage.classList.remove('hidden');
+                if (errorDetails) {
+                    errorDetails.textContent = `Error ${error.status || 'Unknown'}: ${error.text || error.message || 'Please check your EmailJS configuration.'}`;
+                }
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            }).finally(function() {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitText.classList.remove('hidden');
+                loadingText.classList.add('hidden');
+            });
+    });
 });
 
 // Live Chat Function
